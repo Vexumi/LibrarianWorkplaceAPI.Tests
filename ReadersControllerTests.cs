@@ -1,5 +1,5 @@
 ﻿using LibrarianWorkplaceAPI.Controllers;
-using LibrarianWorkplaceAPI.Interfaces;
+using LibrarianWorkplaceAPI.Core.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -78,7 +78,7 @@ namespace LibrarianWorkplaceAPI.Tests
         public async Task GetReaderById_ReturnsNotFound()
         {
             // Arrange
-            mockRepo.Setup(r => r.Readers.GetById(It.IsAny<int>())).ReturnsAsync((ReaderModel)null);
+            mockRepo.Setup(r => r.Readers.GetById(It.IsAny<int>())).ReturnsAsync((ReaderModel?)null);
 
             // Act
             var actionResult = await controller.GetReaderById(-1);

@@ -1,5 +1,5 @@
 using LibrarianWorkplaceAPI.Controllers;
-using LibrarianWorkplaceAPI.Interfaces;
+using LibrarianWorkplaceAPI.Core.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
